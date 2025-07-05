@@ -1,6 +1,6 @@
 {
   "name": "zyx-system",
-  "version": "0.20.1",
+  "version": "0.20.2",
   "description": "system related utilities",
   "main": "index.js",
   "scripts": {
