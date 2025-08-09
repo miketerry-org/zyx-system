@@ -14,6 +14,9 @@ const getDestinationFiles = require("./lib/getDestinationFiles");
 const runCommand = require("./lib/runCommand");
 const response = require("./lib/response");
 
+// patch the console object to support filtering
+require("./lib/consoleFilter");
+
 const {
   envMode,
   isDebugging,
