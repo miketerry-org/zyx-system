@@ -5,14 +5,15 @@
 // Load all necessary modules
 const coercePrimitive = require("./lib/coercePrimitive");
 const copyFiles = require("./lib/copyFiles");
-const findFiles = require("./lib/findFiles");
 const createDirectories = require("./lib/createDirectories");
-const excludeLeadPath = require("./lib/excludeLeadPath");
 const extractFilename = require("./lib/extractFilename");
+const excludeLeadPath = require("./lib/excludeLeadPath");
 const extractFilePath = require("./lib/extractFilePath");
+const findFiles = require("./lib/findFiles");
 const getDestinationFiles = require("./lib/getDestinationFiles");
-const runCommand = require("./lib/runCommand");
+const renderPayload = require("./lib/renderPayload");
 const response = require("./lib/response");
+const runCommand = require("./lib/runCommand");
 
 // patch the console object to support filtering
 require("./lib/consoleFilter");
@@ -144,16 +145,17 @@ module.exports = {
   halt,
   debug,
 
-  findFiles,
+  coercePrimitive,
   copyFiles,
   createDirectories,
   excludeLeadPath,
   extractFilename,
   extractFilePath,
-  coercePrimitive,
+  findFiles,
   getDestinationFiles,
-  runCommand,
+  renderPayload,
   response,
+  runCommand,
 
   get userRoles() {
     return getUserRoles();
